@@ -3,7 +3,7 @@
 # EP2 - OO 2019.2 (UnB - Gama)
 
 Turmas Renato e Carla
-Data de entrega: 05/11/2019
+Data de entrega: 12/11/2019
 
 ## Descrição
 
