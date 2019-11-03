@@ -11,9 +11,9 @@ public class MenuState extends GameState {
 	
 	private int currentChoice = 0;
 	private String[] options = {
-		"Comum Snake",
-		"Kitty Snake",
-		"Star Snake",
+		"Comum Pumpkin",
+		"Kitty Ghost",
+		"Star Bat",
 		"Quit"
 	};
 	
@@ -28,10 +28,10 @@ public class MenuState extends GameState {
 		
 		try {
 			
-			bg = new Background("/Backgrounds/menubg.gif", 1);
+			bg = new Background("/Backgrounds/menu.jpg", 1);
 			bg.setVector(-0.1, 0);
 			
-			titleColor = new Color(128, 0, 0);
+			titleColor = new Color(238, 0, 0);
 			titleFont = new Font(
 					"Century Gothic",
 					Font.PLAIN,
@@ -60,31 +60,31 @@ public class MenuState extends GameState {
 		// Arte - Título
 		g.setColor(titleColor);
 		g.setFont(titleFont);
-		g.drawString("Snakes & Arrows", 50, 70);
+		g.drawString("Tricks or Treats", 50, 70);
 		
 		// Arte - Opções do menu
 		g.setFont(font);
 		for(int i = 0; i < options.length; i++) {
 			if(i == currentChoice) {
-				g.setColor(Color.BLACK);
-			}
-			else {
 				g.setColor(Color.RED);
 			}
-			g.drawString(options[i], 120, 140 + i * 15);
+			else {
+				g.setColor(Color.BLACK);
+			}
+			g.drawString(options[i], 60, 130 + i * 15);
 		}
 		
 	}
 	
 	private void select() {
 		if(currentChoice == 0) {
-			// Comum Snake
+			// Comum Pumpkin
 		}
 		if(currentChoice == 1) {
-			// Kitty Snake
+			// Kitty Ghost
 		}
 		if(currentChoice == 2) {
-			// Star Snake
+			// Star Bat
 		}
 		if(currentChoice == 3) {
 			// Quit
@@ -112,13 +112,3 @@ public class MenuState extends GameState {
 	public void keyReleased(int k) {}
 	
 }
-
-
-
-
-
-
-
-
-
-
