@@ -16,15 +16,17 @@ public class Game {
 		window.pack();
 		window.setVisible(true);
 
-		JFrame obj = new JFrame();
-		SimpleGame SimpleGame = new SimpleGame();
-
-		obj.setBounds(320, 240, 905, 700);
-		obj.setBackground(Color.DARK_GRAY);
-		obj.setResizable(false);
-		obj.setVisible(true);
-		obj.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		obj.add(SimpleGame);
 	}
+	public static void simple() {
+        JFrame obj = new JFrame();
+        SimpleGame SimpleGame = new SimpleGame();
+
+        obj.setBounds(320, 240, 905, 700);
+        obj.setBackground(Color.DARK_GRAY);
+        obj.setResizable(false);
+        obj.setVisible(true);
+        obj.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        obj.add(SimpleGame);
+    }
 	
 }

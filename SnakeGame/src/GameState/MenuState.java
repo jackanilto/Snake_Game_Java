@@ -1,5 +1,6 @@
 package GameState;
 
+import Main.Game;
 import Menu.Background;
 
 import java.awt.*;
@@ -79,6 +80,7 @@ public class MenuState extends GameState {
 	private void select() {
 		if(currentChoice == 0) {
 			// Comum Pumpkin
+			Game.simple();
 		}
 		if(currentChoice == 1) {
 			// Kitty Ghost
