@@ -13,7 +13,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
-public class SimpleGame extends JPanel implements KeyListener, ActionListener{
+public class KittyGame extends JPanel implements KeyListener, ActionListener{
 
     private int[] snakexlength = new int[750];
     private int[] snakeylength = new int[750];
@@ -56,7 +56,7 @@ public class SimpleGame extends JPanel implements KeyListener, ActionListener{
 
     private ImageIcon titleImage;
 
-    public SimpleGame() {
+    public KittyGame() {
 
         addKeyListener(this);
         setFocusable(true);
@@ -104,29 +104,29 @@ public class SimpleGame extends JPanel implements KeyListener, ActionListener{
         g.drawString("Tamanho: " + lengthsnake, 700, 50);
 
 
-        rightmouth = new ImageIcon("Resources/Characters/pumpkingR.png");
+        rightmouth = new ImageIcon("Resources/Characters/ghostR.png");
         rightmouth.paintIcon(this, g, snakexlength[0], snakeylength[0]);
 
         // Movimento da "cobra"
         for (int a = 0; a < lengthsnake; a++) {
             if (a==0 && right) {
-                rightmouth = new ImageIcon("Resources/Characters/pumpkingR.png");
+                rightmouth = new ImageIcon("Resources/Characters/ghostR.png");
                 rightmouth.paintIcon(this, g, snakexlength[a], snakeylength[a]);
             }
             if (a==0 && left) {
-                leftmouth = new ImageIcon("Resources/Characters/pumpkingL.png");
+                leftmouth = new ImageIcon("Resources/Characters/ghostL.png");
                 leftmouth.paintIcon(this, g, snakexlength[a], snakeylength[a]);
             }
             if (a==0 && down) {
-                downmouth = new ImageIcon("Resources/Characters/pumpkingD.png");
+                downmouth = new ImageIcon("Resources/Characters/ghostD.png");
                 downmouth.paintIcon(this, g, snakexlength[a], snakeylength[a]);
             }
             if (a==0 && up) {
-                upmouth = new ImageIcon("Resources/Characters/pumpkingU.png");
+                upmouth = new ImageIcon("Resources/Characters/ghostU.png");
                 upmouth.paintIcon(this, g, snakexlength[a], snakeylength[a]);
             }
             if (a!=0) {
-                snakeimage = new ImageIcon("Resources/Characters/pumpking.png");
+                snakeimage = new ImageIcon("Resources/Characters/ghost.png");
                 snakeimage.paintIcon(this, g, snakexlength[a], snakeylength[a]);
             }
         }

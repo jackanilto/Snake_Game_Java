@@ -24,13 +24,16 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Resources/Characters" />
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="GameState" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\ianfi\Documents\GitLab\ep2\SnakeGame\Resources\Fruits" />
       <recent name="C:\Users\ianfi\Documents\GitLab\ep2\SnakeGame\Resources\Characters" />
+      <recent name="C:\Users\ianfi\Documents\GitLab\ep2\SnakeGame\Resources\Fruits" />
       <recent name="C:\Users\ianfi\Documents\GitLab\ep2\SnakeGame\Resources\Backgrounds" />
     </key>
   </component>
@@ -93,7 +96,8 @@
       <workItem from="1572741990182" duration="397000" />
       <workItem from="1572781869777" duration="1853000" />
       <workItem from="1572786339690" duration="1985000" />
-      <workItem from="1572833256467" duration="568000" />
+      <workItem from="1572833256467" duration="791000" />
+      <workItem from="1572895285326" duration="4259000" />
     </task>
     <servers />
   </component>

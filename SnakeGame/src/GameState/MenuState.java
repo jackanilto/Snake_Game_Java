@@ -14,7 +14,7 @@ public class MenuState extends GameState {
 	private String[] options = {
 		"Comum Pumpkin",
 		"Kitty Ghost",
-		"Star Bat",
+		"Star Dracula",
 		"Quit"
 	};
 	
@@ -46,9 +46,7 @@ public class MenuState extends GameState {
 		}
 		
 	}
-	
-	public void init() {}
-	
+
 	public void update() {
 		bg.update();
 	}
@@ -84,9 +82,11 @@ public class MenuState extends GameState {
 		}
 		if(currentChoice == 1) {
 			// Kitty Ghost
+            Game.kitty();
 		}
 		if(currentChoice == 2) {
-			// Star Bat
+			// Star Dracula
+            Game.star();
 		}
 		if(currentChoice == 3) {
 			// Quit

@@ -13,7 +13,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
-public class SimpleGame extends JPanel implements KeyListener, ActionListener{
+public class StarGame extends JPanel implements KeyListener, ActionListener{
 
     private int[] snakexlength = new int[750];
     private int[] snakeylength = new int[750];
@@ -56,7 +56,7 @@ public class SimpleGame extends JPanel implements KeyListener, ActionListener{
 
     private ImageIcon titleImage;
 
-    public SimpleGame() {
+    public StarGame() {
 
         addKeyListener(this);
         setFocusable(true);
@@ -104,36 +104,36 @@ public class SimpleGame extends JPanel implements KeyListener, ActionListener{
         g.drawString("Tamanho: " + lengthsnake, 700, 50);
 
 
-        rightmouth = new ImageIcon("Resources/Characters/pumpkingR.png");
+        rightmouth = new ImageIcon("Resources/Characters/draculaR.png");
         rightmouth.paintIcon(this, g, snakexlength[0], snakeylength[0]);
 
         // Movimento da "cobra"
         for (int a = 0; a < lengthsnake; a++) {
             if (a==0 && right) {
-                rightmouth = new ImageIcon("Resources/Characters/pumpkingR.png");
+                rightmouth = new ImageIcon("Resources/Characters/draculaR.png");
                 rightmouth.paintIcon(this, g, snakexlength[a], snakeylength[a]);
             }
             if (a==0 && left) {
-                leftmouth = new ImageIcon("Resources/Characters/pumpkingL.png");
+                leftmouth = new ImageIcon("Resources/Characters/draculaL.png");
                 leftmouth.paintIcon(this, g, snakexlength[a], snakeylength[a]);
             }
             if (a==0 && down) {
-                downmouth = new ImageIcon("Resources/Characters/pumpkingD.png");
+                downmouth = new ImageIcon("Resources/Characters/draculaD.png");
                 downmouth.paintIcon(this, g, snakexlength[a], snakeylength[a]);
             }
             if (a==0 && up) {
-                upmouth = new ImageIcon("Resources/Characters/pumpkingU.png");
+                upmouth = new ImageIcon("Resources/Characters/draculaU.png");
                 upmouth.paintIcon(this, g, snakexlength[a], snakeylength[a]);
             }
             if (a!=0) {
-                snakeimage = new ImageIcon("Resources/Characters/pumpking.png");
+                snakeimage = new ImageIcon("Resources/Characters/bat.png");
                 snakeimage.paintIcon(this, g, snakexlength[a], snakeylength[a]);
             }
         }
 
         Simplefruit = new ImageIcon("Resources/Fruits/simpleCandy.png");
         if ((Simplefruitxpos[xpos] == snakexlength[0] && Simplefruitypos[ypos] == snakeylength[0])) {
-            score++;
+            score+=2;
             lengthsnake++;
             xpos = random.nextInt(34);
             ypos = random.nextInt(23);
