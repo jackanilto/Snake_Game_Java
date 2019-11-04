@@ -8,6 +8,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -17,11 +24,13 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Resources/Backgrounds" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Resources/Fruits" />
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ianfi\Documents\GitLab\ep2\SnakeGame\Resources\Fruits" />
+      <recent name="C:\Users\ianfi\Documents\GitLab\ep2\SnakeGame\Resources\Characters" />
       <recent name="C:\Users\ianfi\Documents\GitLab\ep2\SnakeGame\Resources\Backgrounds" />
     </key>
   </component>
