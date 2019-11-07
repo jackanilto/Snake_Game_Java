@@ -150,7 +150,7 @@ public class StarGame extends JPanel implements KeyListener, ActionListener{
             // Simple Fruit
             Simplefruit = new ImageIcon("Resources/Fruits/simpleCandy.png");
             if ((Simplefruitxpos[xpos] == snakexlength[0] && fruitypos[ypos] == snakeylength[0])) {
-                score++;
+                score += 2;
                 lengthsnake++;
                 xpos = random.nextInt(34);
                 ypos = random.nextInt(23);
@@ -164,7 +164,7 @@ public class StarGame extends JPanel implements KeyListener, ActionListener{
             // Big Fruit
             Bigfruit = new ImageIcon("Resources/Fruits/bigPumpking.png");
             if ((Bigfruitxpos[xpos] == snakexlength[0] && fruitypos[ypos] == snakeylength[0])) {
-                score += 2;
+                score += 4;
                 lengthsnake++;
                 xpos = random.nextInt(34);
                 ypos = random.nextInt(23);
