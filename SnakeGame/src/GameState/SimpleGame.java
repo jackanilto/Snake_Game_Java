@@ -35,29 +35,34 @@ public class SimpleGame extends JPanel implements KeyListener, ActionListener{
     private Timer timer;
     private int delay = 100;
 
-    // Posição das "frutas"
+    // Posição x das "frutas"
     private int[] Simplefruitxpos = {25,50,75,100,125,150,175,200,225,250,275,300,325,
-            350,375,400,425,450,475,500,525,550,575,600,625,650,675,700,725,750,
-            775,800,825,850};
+            350,500,525,550,575,600,625,650,675,700,725,750,775,800,825,850};
     private int[] Bigfruitxpos = {25,50,75,100,125,150,175,200,225,250,275,300,325,
-            350,375,400,425,450,475,500,525,550,575,600,625,650,675,700,725,750,
-            775,800,825,850};
+            350,500,525,550,575,600,625,650,675,700,725,750,775,800,825,850};
     private int[] Decreasefruitxpos = {25,50,75,100,125,150,175,200,225,250,275,300,325,
-            350,375,400,425,450,475,500,525,550,575,600,625,650,675,700,725,750,
-            775,800,825,850};
+            350,500,525,550,575,600,625,650,675,700,725,750,775,800,825,850};
 
-    private int[] fruitypos = {75,100,125,150,175,200,225,250,275,300,325,
-            350,375,400,425,450,475,500,525,550,575,600,625};
+    // Posição y das "frutas"
+    private int[] fruitypos = {75,100,125,150,175,200,225,250,400,425,450,
+            475,500,525,550,575,600,625};
+
+    // Posição xy do "obstáculo"
+    private int[] Obstaclexpos = {375, 400, 425, 450, 475};
+    private int[] Obstacleypos = {275, 300, 325, 350, 375};
 
     // Criando as frutas
     private ImageIcon Simplefruit;
     private ImageIcon Bigfruit;
     private ImageIcon Decreasefruit;
 
+    // Criando o obstáculo
+    private ImageIcon Castleobstacle;
+
     // Randomiza a posição que a fruta irá aparecer
     private Random random = new Random();
-    private int xpos = random.nextInt(34);
-    private int ypos = random.nextInt(23);
+    private int xpos = random.nextInt(29);
+    private int ypos = random.nextInt(18);
 
     // Randomiza qual fruta irá aparecer
     private Random randomFruit = new Random();
@@ -152,8 +157,8 @@ public class SimpleGame extends JPanel implements KeyListener, ActionListener{
             if ((Simplefruitxpos[xpos] == snakexlength[0] && fruitypos[ypos] == snakeylength[0])) {
                 score++;
                 lengthsnake++;
-                xpos = random.nextInt(34);
-                ypos = random.nextInt(23);
+                xpos = random.nextInt(29);
+                ypos = random.nextInt(18);
 
                 PopsUp = randomFruit.nextInt(10);
             }
@@ -161,12 +166,12 @@ public class SimpleGame extends JPanel implements KeyListener, ActionListener{
         }
         else if (PopsUp > 5 && PopsUp <= 8 ) {
             // Big Fruit
-            Bigfruit = new ImageIcon("Resources/Fruits/bigPumpking.png");
+            Bigfruit = new ImageIcon("Resources/Fruits/bigPumpkin.png");
             if ((Bigfruitxpos[xpos] == snakexlength[0] && fruitypos[ypos] == snakeylength[0])) {
                 score += 2;
                 lengthsnake++;
-                xpos = random.nextInt(34);
-                ypos = random.nextInt(23);
+                xpos = random.nextInt(29);
+                ypos = random.nextInt(18);
 
                 PopsUp = randomFruit.nextInt(10);
             }
@@ -177,17 +182,22 @@ public class SimpleGame extends JPanel implements KeyListener, ActionListener{
             Decreasefruit = new ImageIcon("Resources/Fruits/decreaseSaw.png");
             if ((Decreasefruitxpos[xpos] == snakexlength[0] && fruitypos[ypos] == snakeylength[0])) {
                 lengthsnake = 3;
-                xpos = random.nextInt(34);
-                ypos = random.nextInt(23);
+                xpos = random.nextInt(29);
+                ypos = random.nextInt(18);
 
                 PopsUp = randomFruit.nextInt(10);
             }
             Decreasefruit.paintIcon(this, g, Decreasefruitxpos[xpos], fruitypos[ypos]);
         }
 
+        Castleobstacle = new ImageIcon("Resources/Fruits/obstacleCastle.png");
+        Castleobstacle.paintIcon(this, g, 375, 275);
 
+        // Condições para o 'Game Over'
         for (int b = 1; b < lengthsnake; b++) {
-            if (snakexlength[b] == snakexlength[0] && snakeylength[b] == snakeylength[0]) {
+            if (((snakexlength[b] == snakexlength[0]) && (snakeylength[b] == snakeylength[0])) ||
+                    ((snakexlength[b] >= Obstaclexpos[0] && snakexlength[b] <= Obstaclexpos[4] ) &&
+                            (snakeylength[b] >= Obstacleypos[0] && snakeylength[b] <= Obstacleypos[4])) ){
                 right = false;
                 left = false;
                 up = false;
