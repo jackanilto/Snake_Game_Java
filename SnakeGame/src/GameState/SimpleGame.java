@@ -118,29 +118,29 @@ public class SimpleGame extends JPanel implements KeyListener, ActionListener{
         g.drawString("Tamanho: " + lengthsnake, 700, 50);
 
 
-        rightmouth = new ImageIcon("Resources/Characters/pumpkingR.png");
+        rightmouth = new ImageIcon("Resources/Characters/pumpKingR.png");
         rightmouth.paintIcon(this, g, snakexlength[0], snakeylength[0]);
 
         // Movimento da "cobra"
         for (int a = 0; a < lengthsnake; a++) {
             if (a==0 && right) {
-                rightmouth = new ImageIcon("Resources/Characters/pumpkingR.png");
+                rightmouth = new ImageIcon("Resources/Characters/pumpKingR.png");
                 rightmouth.paintIcon(this, g, snakexlength[a], snakeylength[a]);
             }
             if (a==0 && left) {
-                leftmouth = new ImageIcon("Resources/Characters/pumpkingL.png");
+                leftmouth = new ImageIcon("Resources/Characters/pumpKingL.png");
                 leftmouth.paintIcon(this, g, snakexlength[a], snakeylength[a]);
             }
             if (a==0 && down) {
-                downmouth = new ImageIcon("Resources/Characters/pumpkingD.png");
+                downmouth = new ImageIcon("Resources/Characters/pumpKingD.png");
                 downmouth.paintIcon(this, g, snakexlength[a], snakeylength[a]);
             }
             if (a==0 && up) {
-                upmouth = new ImageIcon("Resources/Characters/pumpkingU.png");
+                upmouth = new ImageIcon("Resources/Characters/pumpKingU.png");
                 upmouth.paintIcon(this, g, snakexlength[a], snakeylength[a]);
             }
             if (a!=0) {
-                snakeimage = new ImageIcon("Resources/Characters/pumpking.png");
+                snakeimage = new ImageIcon("Resources/Characters/pumpkin.png");
                 snakeimage.paintIcon(this, g, snakexlength[a], snakeylength[a]);
             }
         }
