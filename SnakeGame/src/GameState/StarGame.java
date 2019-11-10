@@ -92,7 +92,7 @@ public class StarGame extends JPanel implements KeyListener, ActionListener{
         }
 
 
-        g.setColor(Color.WHITE);
+        g.setColor(new Color(255, 127, 39));
         g.drawRect(24, 10, 851, 55);
 
 
@@ -100,7 +100,7 @@ public class StarGame extends JPanel implements KeyListener, ActionListener{
         titleImage.paintIcon(this, g, 25, 11 );
 
 
-        g.setColor(Color.WHITE);
+        g.setColor(new Color(255, 127, 39));
         g.drawRect(24, 74, 851, 577);
 
 
@@ -108,14 +108,14 @@ public class StarGame extends JPanel implements KeyListener, ActionListener{
         g.fillRect(25, 75, 850, 575);
 
 
-        g.setColor(Color.WHITE);
+        g.setColor(new Color(255, 127, 39));
         g.setFont(new Font("arial", Font.PLAIN, 14));
-        g.drawString("Pontuação: " + score, 700, 30);
+        g.drawString("Pontuação: " + score, 700, 35);
 
 
-        g.setColor(Color.WHITE);
+        g.setColor(new Color(255, 127, 39));
         g.setFont(new Font("arial", Font.PLAIN, 14));
-        g.drawString("Tamanho: " + lengthsnake, 700, 50);
+        g.drawString("Tamanho: " + lengthsnake, 700, 55);
 
 
         rightmouth = new ImageIcon("Resources/Characters/draculaR.png");
