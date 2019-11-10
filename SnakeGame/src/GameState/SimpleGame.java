@@ -97,7 +97,7 @@ public class SimpleGame extends JPanel implements KeyListener, ActionListener{
         }
 
         // Arte - Borda
-        g.setColor(new Color(255, 127, 39));
+        g.setColor(Color.WHITE);
         g.drawRect(24, 10, 851, 55);
 
         // Arte - Título superior
@@ -105,7 +105,7 @@ public class SimpleGame extends JPanel implements KeyListener, ActionListener{
         titleImage.paintIcon(this, g, 25, 11 );
 
         // Arte - Borda gameplay
-        g.setColor(new Color(255, 127, 39));
+        g.setColor(Color.WHITE);
         g.drawRect(24, 74, 851, 577);
 
         // Arte - Background gameplay
@@ -113,14 +113,14 @@ public class SimpleGame extends JPanel implements KeyListener, ActionListener{
         g.fillRect(25, 75, 850, 575);
 
         // Arte - Pontuação
-        g.setColor(new Color(255, 127, 39));
+        g.setColor(Color.WHITE);
         g.setFont(new Font("arial", Font.PLAIN, 14));
-        g.drawString("Pontuação: " + score, 700, 35);
+        g.drawString("Pontuação: " + score, 700, 30);
 
         // Arte - Tamanho da "cobra"
-        g.setColor(new Color(255, 127, 39));
+        g.setColor(Color.WHITE);
         g.setFont(new Font("arial", Font.PLAIN, 14));
-        g.drawString("Tamanho: " + lengthsnake, 700, 55);
+        g.drawString("Tamanho: " + lengthsnake, 700, 50);
 
 
         rightmouth = new ImageIcon("Resources/Characters/pumpKingR.png");
