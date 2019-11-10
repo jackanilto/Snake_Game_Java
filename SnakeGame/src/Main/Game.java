@@ -24,7 +24,7 @@ public class Game {
         SimpleGame SimpleGame = new SimpleGame();
 
         obj.setBounds(320, 240, 905, 700);
-        obj.setBackground(Color.DARK_GRAY);
+        obj.setBackground(new Color(56, 36, 83));
         obj.setResizable(false);
         obj.setVisible(true);
         obj.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -36,7 +36,7 @@ public class Game {
         KittyGame kittyGame = new KittyGame();
 
         obj.setBounds(320, 240, 905, 700);
-        obj.setBackground(Color.DARK_GRAY);
+        obj.setBackground(new Color(56, 36, 83));
         obj.setResizable(false);
         obj.setVisible(true);
         obj.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -48,7 +48,7 @@ public class Game {
         StarGame starGame = new StarGame();
 
         obj.setBounds(320, 240, 905, 700);
-        obj.setBackground(Color.DARK_GRAY);
+        obj.setBackground(new Color(56, 36, 83));
         obj.setResizable(false);
         obj.setVisible(true);
         obj.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
