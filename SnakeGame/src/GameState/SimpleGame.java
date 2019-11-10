@@ -115,12 +115,12 @@ public class SimpleGame extends JPanel implements KeyListener, ActionListener{
         // Arte - Pontuação
         g.setColor(new Color(255, 127, 39));
         g.setFont(new Font("arial", Font.PLAIN, 14));
-        g.drawString("Pontuação: " + score, 700, 30);
+        g.drawString("Pontuação: " + score, 700, 35);
 
         // Arte - Tamanho da "cobra"
         g.setColor(new Color(255, 127, 39));
         g.setFont(new Font("arial", Font.PLAIN, 14));
-        g.drawString("Tamanho: " + lengthsnake, 700, 50);
+        g.drawString("Tamanho: " + lengthsnake, 700, 55);
 
 
         rightmouth = new ImageIcon("Resources/Characters/pumpKingR.png");

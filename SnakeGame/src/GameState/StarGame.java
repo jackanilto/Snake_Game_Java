@@ -110,12 +110,12 @@ public class StarGame extends JPanel implements KeyListener, ActionListener{
 
         g.setColor(new Color(255, 127, 39));
         g.setFont(new Font("arial", Font.PLAIN, 14));
-        g.drawString("Pontuação: " + score, 700, 30);
+        g.drawString("Pontuação: " + score, 700, 35);
 
 
         g.setColor(new Color(255, 127, 39));
         g.setFont(new Font("arial", Font.PLAIN, 14));
-        g.drawString("Tamanho: " + lengthsnake, 700, 50);
+        g.drawString("Tamanho: " + lengthsnake, 700, 55);
 
 
         rightmouth = new ImageIcon("Resources/Characters/draculaR.png");
