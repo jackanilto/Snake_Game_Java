@@ -1,16 +1,39 @@
-# **TRICKS OR TREATS** - Game Snake com temática de HALLOWEEN
-
-    Ian Fillipe Pontes Ferreira
-    18/0102087
-    Turma B (Carla)
-
 # EP2 - OO 2019.2 (UnB - Gama)
 
 Turmas Renato e Carla
 Data de entrega: 12/11/2019
 
 
+# **TRICKS OR TREATS** - Game Snake com temática de HALLOWEEN
 
+    Ian Fillipe Pontes Ferreira
+    18/0102087
+    Turma B (Carla)
+    
+# JAVA
+### Versão utilizada para fazer o EP2
+
+    java version "12.0.2" 2019-07-16
+    Java(TM) SE Runtime Environment (build 12.0.2+10)
+    Java HotSpot(TM) 64-Bit Server VM (build 12.0.2+10, mixed mode, sharing)
+    
+### Testado também na versão
+    
+    java version "13.0.1" 2019-10-15
+    Java(TM) SE Runtime Environment (build 13.0.1+9)
+    Java HotSpot(TM) 64-Bit Server VM (build 13.0.1+9, mixed mode, sharing)
+    
+### IDE utilizada
+    
+    IntelliJ IDEA 2019.2
+    
+# Como executar o código
+
+    Na IDE, dar open project não na pasta EP2, mas sim na pasta SnakeGame.
+    Dar o run no arquivo src/Main/Game.java
+    
+    Ou abra o joga pelo executável criado SnakeGame/SnakeGame.jar
+    
 # Menu do jogo
 
     O menu possui quatro opções e elas devem ser controladas através das "setinhas" do teclado, e escolhidas 
