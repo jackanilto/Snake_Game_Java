@@ -15,6 +15,8 @@ import javax.swing.Timer;
 
 public class SimpleGame extends JPanel implements KeyListener, ActionListener{
 
+    public int time;
+
     private int[] snakexlength = new int[750];
     private int[] snakeylength = new int[750];
 
@@ -78,6 +80,7 @@ public class SimpleGame extends JPanel implements KeyListener, ActionListener{
     private ImageIcon titleImage;
 
     public SimpleGame() {
+        time = 0;
 
         addKeyListener(this);
         setFocusable(true);
@@ -157,12 +160,19 @@ public class SimpleGame extends JPanel implements KeyListener, ActionListener{
             // Simple Fruit
             Simplefruit = new ImageIcon("Resources/Fruits/simpleCandy.png");
             if ((Simplefruitxpos[xpos] == snakexlength[0] && fruitypos[ypos] == snakeylength[0])) {
-                score++;
+                score ++;
                 lengthsnake++;
+                time = 0;
                 xpos = random.nextInt(29);
                 ypos = random.nextInt(18);
 
                 PopsUp = randomFruit.nextInt(10);
+            }else if (time >= 90) {
+                // Tempo de desaparecimento da fruta
+                xpos = random.nextInt(29);
+                ypos = random.nextInt(18);
+                PopsUp = randomFruit.nextInt(10);
+                time = 0;
             }
             Simplefruit.paintIcon(this, g, Simplefruitxpos[xpos], fruitypos[ypos]);
         }
@@ -172,10 +182,17 @@ public class SimpleGame extends JPanel implements KeyListener, ActionListener{
             if ((Bigfruitxpos[xpos] == snakexlength[0] && fruitypos[ypos] == snakeylength[0])) {
                 score += 2;
                 lengthsnake++;
+                time = 0;
                 xpos = random.nextInt(29);
                 ypos = random.nextInt(18);
 
                 PopsUp = randomFruit.nextInt(10);
+            }else if (time >= 90) {
+                // Tempo de desaparecimento da fruta
+                xpos = random.nextInt(29);
+                ypos = random.nextInt(18);
+                PopsUp = randomFruit.nextInt(10);
+                time = 0;
             }
             Bigfruit.paintIcon(this, g, Bigfruitxpos[xpos], fruitypos[ypos]);
         }
@@ -184,10 +201,17 @@ public class SimpleGame extends JPanel implements KeyListener, ActionListener{
             Decreasefruit = new ImageIcon("Resources/Fruits/decreaseSaw.png");
             if ((Decreasefruitxpos[xpos] == snakexlength[0] && fruitypos[ypos] == snakeylength[0])) {
                 lengthsnake = 3;
+                time = 0;
                 xpos = random.nextInt(29);
                 ypos = random.nextInt(18);
 
                 PopsUp = randomFruit.nextInt(10);
+            }else if (time >= 90) {
+                // Tempo de desaparecimento da fruta
+                xpos = random.nextInt(29);
+                ypos = random.nextInt(18);
+                PopsUp = randomFruit.nextInt(10);
+                time = 0;
             }
             Decreasefruit.paintIcon(this, g, Decreasefruitxpos[xpos], fruitypos[ypos]);
         }
@@ -221,6 +245,9 @@ public class SimpleGame extends JPanel implements KeyListener, ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         timer.start();
+        time++;
+
+
 
         if(right) {
             for (int r = lengthsnake - 1; r >= 0; r--) {
@@ -304,6 +331,7 @@ public class SimpleGame extends JPanel implements KeyListener, ActionListener{
             moves = 0;
             score = 0;
             lengthsnake = 3;
+            time = 0;
             gameOver = false;
             repaint();
         }

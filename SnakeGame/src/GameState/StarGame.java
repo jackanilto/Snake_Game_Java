@@ -15,6 +15,8 @@ import javax.swing.Timer;
 
 public class StarGame extends JPanel implements KeyListener, ActionListener{
 
+    public int time;
+
     private int[] snakexlength = new int[750];
     private int[] snakeylength = new int[750];
 
@@ -73,6 +75,7 @@ public class StarGame extends JPanel implements KeyListener, ActionListener{
     private ImageIcon titleImage;
 
     public StarGame() {
+        time = 0;
 
         addKeyListener(this);
         setFocusable(true);
@@ -154,25 +157,37 @@ public class StarGame extends JPanel implements KeyListener, ActionListener{
             if ((Simplefruitxpos[xpos] == snakexlength[0] && fruitypos[ypos] == snakeylength[0])) {
                 score += 2;
                 lengthsnake++;
+                time = 0;
                 xpos = random.nextInt(29);
                 ypos = random.nextInt(18);
 
                 PopsUp = randomFruit.nextInt(10);
+            }else if (time >= 90) {
+                xpos = random.nextInt(29);
+                ypos = random.nextInt(18);
+                PopsUp = randomFruit.nextInt(10);
+                time = 0;
             }
             Simplefruit.paintIcon(this, g, Simplefruitxpos[xpos], fruitypos[ypos]);
-
         }
         else if (PopsUp > 5 && PopsUp <= 8 ) {
             // Big Fruit
             Bigfruit = new ImageIcon("Resources/Fruits/bigPumpkin.png");
             if ((Bigfruitxpos[xpos] == snakexlength[0] && fruitypos[ypos] == snakeylength[0])) {
                 score += 4;
+                time = 0;
                 lengthsnake++;
                 xpos = random.nextInt(29);
                 ypos = random.nextInt(18);
 
                 PopsUp = randomFruit.nextInt(10);
+            }else if (time >= 90) {
+                xpos = random.nextInt(29);
+                ypos = random.nextInt(18);
+                PopsUp = randomFruit.nextInt(10);
+                time = 0;
             }
+
             Bigfruit.paintIcon(this, g, Bigfruitxpos[xpos], fruitypos[ypos]);
         }
         else {
@@ -180,10 +195,16 @@ public class StarGame extends JPanel implements KeyListener, ActionListener{
             Decreasefruit = new ImageIcon("Resources/Fruits/decreaseSaw.png");
             if ((Decreasefruitxpos[xpos] == snakexlength[0] && fruitypos[ypos] == snakeylength[0])) {
                 lengthsnake = 3;
+                time = 0;
                 xpos = random.nextInt(29);
                 ypos = random.nextInt(18);
 
                 PopsUp = randomFruit.nextInt(10);
+            }else if (time >= 90) {
+                xpos = random.nextInt(29);
+                ypos = random.nextInt(18);
+                PopsUp = randomFruit.nextInt(10);
+                time = 0;
             }
             Decreasefruit.paintIcon(this, g, Decreasefruitxpos[xpos], fruitypos[ypos]);
         }
@@ -218,6 +239,7 @@ public class StarGame extends JPanel implements KeyListener, ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         timer.start();
+        time++;
 
         if(right) {
             for (int r = lengthsnake - 1; r >= 0; r--) {
@@ -301,6 +323,7 @@ public class StarGame extends JPanel implements KeyListener, ActionListener{
             moves = 0;
             score = 0;
             lengthsnake = 3;
+            time = 0;
             gameOver = false;
             repaint();
         }

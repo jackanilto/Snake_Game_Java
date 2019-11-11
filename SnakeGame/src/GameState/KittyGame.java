@@ -15,6 +15,8 @@ import javax.swing.Timer;
 
 public class KittyGame extends JPanel implements KeyListener, ActionListener{
 
+    public int time;
+
     private int[] snakexlength = new int[750];
     private int[] snakeylength = new int[750];
 
@@ -70,6 +72,7 @@ public class KittyGame extends JPanel implements KeyListener, ActionListener{
     private ImageIcon titleImage;
 
     public KittyGame() {
+        time = 0;
 
         addKeyListener(this);
         setFocusable(true);
@@ -146,20 +149,25 @@ public class KittyGame extends JPanel implements KeyListener, ActionListener{
 
         Castleobstacle = new ImageIcon("Resources/Fruits/obstacleCastle.png");
         Castleobstacle.paintIcon(this, g, 375, 275);
-        
+
         if (PopsUp <= 5) {
             // Simple Fruit
             Simplefruit = new ImageIcon("Resources/Fruits/simpleCandy.png");
             if ((Simplefruitxpos[xpos] == snakexlength[0] && fruitypos[ypos] == snakeylength[0])) {
-                score++;
+                score ++;
                 lengthsnake++;
+                time = 0;
                 xpos = random.nextInt(29);
                 ypos = random.nextInt(18);
 
                 PopsUp = randomFruit.nextInt(10);
+            }else if (time >= 90) {
+                xpos = random.nextInt(29);
+                ypos = random.nextInt(18);
+                PopsUp = randomFruit.nextInt(10);
+                time = 0;
             }
             Simplefruit.paintIcon(this, g, Simplefruitxpos[xpos], fruitypos[ypos]);
-
         }
         else if (PopsUp > 5 && PopsUp <= 8 ) {
             // Big Fruit
@@ -167,11 +175,18 @@ public class KittyGame extends JPanel implements KeyListener, ActionListener{
             if ((Bigfruitxpos[xpos] == snakexlength[0] && fruitypos[ypos] == snakeylength[0])) {
                 score += 2;
                 lengthsnake++;
+                time = 0;
                 xpos = random.nextInt(29);
                 ypos = random.nextInt(18);
 
                 PopsUp = randomFruit.nextInt(10);
+            }else if (time >= 90) {
+                xpos = random.nextInt(29);
+                ypos = random.nextInt(18);
+                PopsUp = randomFruit.nextInt(10);
+                time = 0;
             }
+
             Bigfruit.paintIcon(this, g, Bigfruitxpos[xpos], fruitypos[ypos]);
         }
         else {
@@ -179,10 +194,16 @@ public class KittyGame extends JPanel implements KeyListener, ActionListener{
             Decreasefruit = new ImageIcon("Resources/Fruits/decreaseSaw.png");
             if ((Decreasefruitxpos[xpos] == snakexlength[0] && fruitypos[ypos] == snakeylength[0])) {
                 lengthsnake = 3;
+                time = 0;
                 xpos = random.nextInt(29);
                 ypos = random.nextInt(18);
 
                 PopsUp = randomFruit.nextInt(10);
+            }else if (time >= 90) {
+                xpos = random.nextInt(29);
+                ypos = random.nextInt(18);
+                PopsUp = randomFruit.nextInt(10);
+                time = 0;
             }
             Decreasefruit.paintIcon(this, g, Decreasefruitxpos[xpos], fruitypos[ypos]);
         }
@@ -212,6 +233,7 @@ public class KittyGame extends JPanel implements KeyListener, ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         timer.start();
+        time++;
 
         if(right) {
             for (int r = lengthsnake - 1; r >= 0; r--) {
@@ -295,6 +317,7 @@ public class KittyGame extends JPanel implements KeyListener, ActionListener{
             moves = 0;
             score = 0;
             lengthsnake = 3;
+            time = 0;
             gameOver = false;
             repaint();
         }
