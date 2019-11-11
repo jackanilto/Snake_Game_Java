@@ -280,7 +280,7 @@ public class KittyGame extends JPanel implements KeyListener, ActionListener{
                     snakexlength[r] = snakexlength[r-1];
                 }
                 if (snakexlength[r] > 850) {
-                    snakexlength[r] = 25;
+                    snakexlength[r] = 850;
                 }
             }
             repaint();
@@ -297,7 +297,7 @@ public class KittyGame extends JPanel implements KeyListener, ActionListener{
                     snakexlength[r] = snakexlength[r-1];
                 }
                 if (snakexlength[r] < 25) {
-                    snakexlength[r] = 850;
+                    snakexlength[r] = 25;
                 }
             }
             repaint();
@@ -314,7 +314,7 @@ public class KittyGame extends JPanel implements KeyListener, ActionListener{
                     snakeylength[r] = snakeylength[r-1];
                 }
                 if (snakeylength[r] < 75) {
-                    snakeylength[r] = 625;
+                    snakeylength[r] = 75;
                 }
             }
             repaint();
@@ -331,7 +331,7 @@ public class KittyGame extends JPanel implements KeyListener, ActionListener{
                     snakeylength[r] = snakeylength[r-1];
                 }
                 if (snakeylength[r] > 625) {
-                    snakeylength[r] = 75;
+                    snakeylength[r] = 625;
                 }
             }
             repaint();

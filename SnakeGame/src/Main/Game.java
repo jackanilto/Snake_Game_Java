@@ -29,7 +29,7 @@ public class Game {
         obj.setResizable(false);
         obj.setVisible(true);
         obj.setLocationRelativeTo(null);
-        obj.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        obj.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         obj.add(SimpleGame);
     }
 
@@ -42,7 +42,7 @@ public class Game {
         obj.setResizable(false);
         obj.setVisible(true);
         obj.setLocationRelativeTo(null);
-        obj.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        obj.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         obj.add(kittyGame);
     }
 
@@ -55,7 +55,7 @@ public class Game {
         obj.setResizable(false);
         obj.setVisible(true);
         obj.setLocationRelativeTo(null);
-        obj.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        obj.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         obj.add(starGame);
     }
 
