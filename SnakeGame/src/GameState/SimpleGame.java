@@ -46,6 +46,8 @@ public class SimpleGame extends JPanel implements KeyListener, ActionListener{
             350,500,525,550,575,600,625,650,675,700,725,750,775,800,825,850};
     private int[] Decreasefruitxpos = {25,50,75,100,125,150,175,200,225,250,275,300,325,
             350,500,525,550,575,600,625,650,675,700,725,750,775,800,825,850};
+    private int[] Bombfruitxpos = {25,50,75,100,125,150,175,200,225,250,275,300,325,
+            350,500,525,550,575,600,625,650,675,700,725,750,775,800,825,850};
 
     // Posição y das "frutas"
     private int[] fruitypos = {75,100,125,150,175,200,225,250,400,425,450,
@@ -59,6 +61,7 @@ public class SimpleGame extends JPanel implements KeyListener, ActionListener{
     private ImageIcon Simplefruit;
     private ImageIcon Bigfruit;
     private ImageIcon Decreasefruit;
+    private ImageIcon Bombfruit;
 
     // Criando o obstáculo
     private ImageIcon Castleobstacle;
@@ -70,7 +73,7 @@ public class SimpleGame extends JPanel implements KeyListener, ActionListener{
 
     // Randomiza qual fruta irá aparecer
     private Random randomFruit = new Random();
-    private int PopsUp = randomFruit.nextInt(10);
+    private int PopsUp = randomFruit.nextInt(15);
 
     // Pontuação
     private int score = 0;
@@ -156,7 +159,7 @@ public class SimpleGame extends JPanel implements KeyListener, ActionListener{
         }
 
 
-        if (PopsUp <= 5) {
+        if (PopsUp <= 6) {
             // Simple Fruit
             Simplefruit = new ImageIcon("Resources/Fruits/simpleCandy.png");
             if ((Simplefruitxpos[xpos] == snakexlength[0] && fruitypos[ypos] == snakeylength[0])) {
@@ -166,17 +169,17 @@ public class SimpleGame extends JPanel implements KeyListener, ActionListener{
                 xpos = random.nextInt(29);
                 ypos = random.nextInt(18);
 
-                PopsUp = randomFruit.nextInt(10);
+                PopsUp = randomFruit.nextInt(15);
             }else if (time >= 90) {
                 // Tempo de desaparecimento da fruta
                 xpos = random.nextInt(29);
                 ypos = random.nextInt(18);
-                PopsUp = randomFruit.nextInt(10);
+                PopsUp = randomFruit.nextInt(15);
                 time = 0;
             }
             Simplefruit.paintIcon(this, g, Simplefruitxpos[xpos], fruitypos[ypos]);
         }
-        else if (PopsUp > 5 && PopsUp <= 8 ) {
+        else if (PopsUp > 6 && PopsUp <= 9 ) {
             // Big Fruit
             Bigfruit = new ImageIcon("Resources/Fruits/bigPumpkin.png");
             if ((Bigfruitxpos[xpos] == snakexlength[0] && fruitypos[ypos] == snakeylength[0])) {
@@ -186,15 +189,45 @@ public class SimpleGame extends JPanel implements KeyListener, ActionListener{
                 xpos = random.nextInt(29);
                 ypos = random.nextInt(18);
 
-                PopsUp = randomFruit.nextInt(10);
+                PopsUp = randomFruit.nextInt(15);
             }else if (time >= 90) {
                 // Tempo de desaparecimento da fruta
                 xpos = random.nextInt(29);
                 ypos = random.nextInt(18);
-                PopsUp = randomFruit.nextInt(10);
+                PopsUp = randomFruit.nextInt(15);
                 time = 0;
             }
             Bigfruit.paintIcon(this, g, Bigfruitxpos[xpos], fruitypos[ypos]);
+        }
+        else if (PopsUp > 9 && PopsUp <= 13 ) {
+            // Bomb Fruit
+            Bombfruit = new ImageIcon("Resources/Fruits/bombPoison.png");
+            if ((Bombfruitxpos[xpos] == snakexlength[0] && fruitypos[ypos] == snakeylength[0])) {
+                score += 2;
+                lengthsnake++;
+                time = 0;
+
+                right = false;
+                left = false;
+                up = false;
+                down = false;
+                gameOver = true;
+
+                g.setColor(Color.ORANGE);
+                g.setFont(new Font("arial", Font.BOLD, 50));
+                g.drawString("Game Over e TRAVESSURAS", 90, 200);
+
+                g.setFont(new Font("arial", Font.BOLD, 20));
+                g.drawString("Aperte 'space' para REINICIAR ", 290, 240);
+
+            }else if (time >= 90) {
+                // Tempo de desaparecimento da fruta
+                xpos = random.nextInt(29);
+                ypos = random.nextInt(18);
+                PopsUp = randomFruit.nextInt(15);
+                time = 0;
+            }
+            Bombfruit.paintIcon(this, g, Bombfruitxpos[xpos], fruitypos[ypos]);
         }
         else {
             // Decrease Fruit
@@ -205,16 +238,17 @@ public class SimpleGame extends JPanel implements KeyListener, ActionListener{
                 xpos = random.nextInt(29);
                 ypos = random.nextInt(18);
 
-                PopsUp = randomFruit.nextInt(10);
+                PopsUp = randomFruit.nextInt(15);
             }else if (time >= 90) {
                 // Tempo de desaparecimento da fruta
                 xpos = random.nextInt(29);
                 ypos = random.nextInt(18);
-                PopsUp = randomFruit.nextInt(10);
+                PopsUp = randomFruit.nextInt(15);
                 time = 0;
             }
             Decreasefruit.paintIcon(this, g, Decreasefruitxpos[xpos], fruitypos[ypos]);
         }
+
 
         Castleobstacle = new ImageIcon("Resources/Fruits/obstacleCastle.png");
         Castleobstacle.paintIcon(this, g, 375, 275);
@@ -232,10 +266,10 @@ public class SimpleGame extends JPanel implements KeyListener, ActionListener{
 
                 g.setColor(Color.ORANGE);
                 g.setFont(new Font("arial", Font.BOLD, 50));
-                g.drawString("Game Over", 300, 300);
+                g.drawString("Game Over e TRAVESSURAS", 90, 200);
 
                 g.setFont(new Font("arial", Font.BOLD, 20));
-                g.drawString("Aperte 'space' para REINICIAR ", 290, 340);
+                g.drawString("Aperte 'space' para REINICIAR ", 290, 240);
             }
         }
 
