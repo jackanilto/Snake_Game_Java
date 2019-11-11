@@ -24,7 +24,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Resources/Backgrounds" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
@@ -104,6 +104,7 @@
       <workItem from="1573252608826" duration="730000" />
       <workItem from="1573312989266" duration="8501000" />
       <workItem from="1573490163461" duration="1360000" />
+      <workItem from="1573514905839" duration="566000" />
     </task>
     <servers />
   </component>

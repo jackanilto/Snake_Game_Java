@@ -301,16 +301,15 @@ public class SimpleGame extends JPanel implements KeyListener, ActionListener{
             }
             repaint();
         }
-        if(left) {
+        if (left) {
             for (int r = lengthsnake - 1; r >= 0; r--) {
-                snakeylength[r+1] = snakeylength[r];
+                snakeylength[r + 1] = snakeylength[r];
             }
             for (int r = lengthsnake; r >= 0; r--) {
                 if (r == 0) {
                     snakexlength[r] = snakexlength[r] - 25;
-                }
-                else {
-                    snakexlength[r] = snakexlength[r-1];
+                } else {
+                    snakexlength[r] = snakexlength[r - 1];
                 }
                 if (snakexlength[r] < 25) {
                     snakexlength[r] = 25;
@@ -385,17 +384,19 @@ public class SimpleGame extends JPanel implements KeyListener, ActionListener{
                 down = false;
             }
 
-            if (e.getKeyCode() == KeyEvent.VK_LEFT) {
-                moves++;
-                left = true;
-                if (!right) {
+            if (moves != 0) {
+                if (e.getKeyCode() == KeyEvent.VK_LEFT) {
+                    moves++;
                     left = true;
-                } else {
-                    left = false;
-                    right = true;
+                    if (!right) {
+                        left = true;
+                    } else {
+                        left = false;
+                        right = true;
+                    }
+                    up = false;
+                    down = false;
                 }
-                up = false;
-                down = false;
             }
 
             if (e.getKeyCode() == KeyEvent.VK_UP) {
