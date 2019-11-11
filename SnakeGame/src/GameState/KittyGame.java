@@ -208,7 +208,7 @@ public class KittyGame extends JPanel implements KeyListener, ActionListener{
 
                 g.setColor(Color.ORANGE);
                 g.setFont(new Font("arial", Font.BOLD, 50));
-                g.drawString("Game Over e TRAVESSURAS", 90, 200);
+                g.drawString("Game Over e TRAVESSURAS", 78, 200);
 
                 g.setFont(new Font("arial", Font.BOLD, 20));
                 g.drawString("Aperte 'space' para REINICIAR ", 290, 240);
@@ -253,7 +253,7 @@ public class KittyGame extends JPanel implements KeyListener, ActionListener{
 
                 g.setColor(Color.ORANGE);
                 g.setFont(new Font("arial", Font.BOLD, 50));
-                g.drawString("Game Over e TRAVESSURAS", 90, 200);
+                g.drawString("Game Over e TRAVESSURAS", 78, 200);
 
                 g.setFont(new Font("arial", Font.BOLD, 20));
                 g.drawString("Aperte 'space' para REINICIAR ", 290, 240);

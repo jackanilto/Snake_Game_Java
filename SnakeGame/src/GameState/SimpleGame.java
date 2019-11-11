@@ -132,25 +132,25 @@ public class SimpleGame extends JPanel implements KeyListener, ActionListener{
         g.drawString("Tamanho: " + lengthsnake, 700, 55);
 
 
-        rightmouth = new ImageIcon("Resources/Characters/pumpKingR.png");
+        rightmouth = new ImageIcon("Resources/Characters/pumpkingR.png");
         rightmouth.paintIcon(this, g, snakexlength[0], snakeylength[0]);
 
         // Movimento da "cobra"
         for (int a = 0; a < lengthsnake; a++) {
             if (a==0 && right) {
-                rightmouth = new ImageIcon("Resources/Characters/pumpKingR.png");
+                rightmouth = new ImageIcon("Resources/Characters/pumpkingR.png");
                 rightmouth.paintIcon(this, g, snakexlength[a], snakeylength[a]);
             }
             if (a==0 && left) {
-                leftmouth = new ImageIcon("Resources/Characters/pumpKingL.png");
+                leftmouth = new ImageIcon("Resources/Characters/pumpkingL.png");
                 leftmouth.paintIcon(this, g, snakexlength[a], snakeylength[a]);
             }
             if (a==0 && down) {
-                downmouth = new ImageIcon("Resources/Characters/pumpKingD.png");
+                downmouth = new ImageIcon("Resources/Characters/pumpkingD.png");
                 downmouth.paintIcon(this, g, snakexlength[a], snakeylength[a]);
             }
             if (a==0 && up) {
-                upmouth = new ImageIcon("Resources/Characters/pumpKingU.png");
+                upmouth = new ImageIcon("Resources/Characters/pumpkingU.png");
                 upmouth.paintIcon(this, g, snakexlength[a], snakeylength[a]);
             }
             if (a!=0) {
@@ -216,7 +216,7 @@ public class SimpleGame extends JPanel implements KeyListener, ActionListener{
 
                 g.setColor(Color.ORANGE);
                 g.setFont(new Font("arial", Font.BOLD, 50));
-                g.drawString("Game Over e TRAVESSURAS", 90, 200);
+                g.drawString("Game Over e TRAVESSURAS", 78, 200);
 
                 g.setFont(new Font("arial", Font.BOLD, 20));
                 g.drawString("Aperte 'space' para REINICIAR ", 290, 240);
@@ -267,7 +267,7 @@ public class SimpleGame extends JPanel implements KeyListener, ActionListener{
 
                 g.setColor(Color.ORANGE);
                 g.setFont(new Font("arial", Font.BOLD, 50));
-                g.drawString("Game Over e TRAVESSURAS", 90, 200);
+                g.drawString("Game Over e TRAVESSURAS", 78, 200);
 
                 g.setFont(new Font("arial", Font.BOLD, 20));
                 g.drawString("Aperte 'space' para REINICIAR ", 290, 240);
