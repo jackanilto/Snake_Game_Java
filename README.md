@@ -93,7 +93,7 @@ Data de entrega: 12/11/2019
 ### Bomb Poison
 ![](SnakeGame/Resources/Fruits/bombPoison.png)  **Veneno que causa a morte da Snake.**
 
-# Tipos de frutas
+# Obstáculo
 ### Castle
 ![](SnakeGame/Resources/Fruits/obstacleCastle.png)   **Obtáculo na tela, que causa a morte da Snake (com exeção da Kitty Ghost).**
 
