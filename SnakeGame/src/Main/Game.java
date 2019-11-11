@@ -21,42 +21,42 @@ public class Game {
 
 	}
 	public static void simple() {
-        JFrame obj = new JFrame("Tricks or Treats - Comum Pumpkin");
+        JFrame gameplay = new JFrame("Tricks or Treats - Comum Pumpkin");
         SimpleGame SimpleGame = new SimpleGame();
 
-        obj.setBounds(320, 240, 905, 700);
-        obj.setBackground(new Color(56, 36, 83));
-        obj.setResizable(false);
-        obj.setVisible(true);
-        obj.setLocationRelativeTo(null);
-        obj.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-        obj.add(SimpleGame);
+        gameplay.setBounds(320, 240, 905, 700);
+        gameplay.setBackground(new Color(56, 36, 83));
+        gameplay.setResizable(false);
+        gameplay.setVisible(true);
+        gameplay.setLocationRelativeTo(null);
+        gameplay.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+        gameplay.add(SimpleGame);
     }
 
     public static void kitty() {
-        JFrame obj = new JFrame("Tricks or Treats - Kitty Ghost");
+        JFrame gameplay = new JFrame("Tricks or Treats - Kitty Ghost");
         KittyGame kittyGame = new KittyGame();
 
-        obj.setBounds(320, 240, 905, 700);
-        obj.setBackground(new Color(56, 36, 83));
-        obj.setResizable(false);
-        obj.setVisible(true);
-        obj.setLocationRelativeTo(null);
-        obj.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-        obj.add(kittyGame);
+        gameplay.setBounds(320, 240, 905, 700);
+        gameplay.setBackground(new Color(56, 36, 83));
+        gameplay.setResizable(false);
+        gameplay.setVisible(true);
+        gameplay.setLocationRelativeTo(null);
+        gameplay.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+        gameplay.add(kittyGame);
     }
 
     public static void star() {
-        JFrame obj = new JFrame("Tricks or Treats - Star Dracula");
+        JFrame gameplay = new JFrame("Tricks or Treats - Star Dracula");
         StarGame starGame = new StarGame();
 
-        obj.setBounds(320, 240, 905, 700);
-        obj.setBackground(new Color(56, 36, 83));
-        obj.setResizable(false);
-        obj.setVisible(true);
-        obj.setLocationRelativeTo(null);
-        obj.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-        obj.add(starGame);
+        gameplay.setBounds(320, 240, 905, 700);
+        gameplay.setBackground(new Color(56, 36, 83));
+        gameplay.setResizable(false);
+        gameplay.setVisible(true);
+        gameplay.setLocationRelativeTo(null);
+        gameplay.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+        gameplay.add(starGame);
     }
 
 	
