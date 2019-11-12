@@ -36,16 +36,17 @@
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\ianfi\Documents\GitLab\ep2\SnakeGame" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="GameState" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ianfi\Documents\GitLab\ep2\SnakeGame\Resources\Fruits" />
       <recent name="C:\Users\ianfi\Documents\GitLab\ep2\SnakeGame\Resources\Characters" />
       <recent name="C:\Users\ianfi\Documents\GitLab\ep2\SnakeGame\Resources\Backgrounds" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="GameState" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ianfi\Documents\GitLab\ep2\SnakeGame\src" />
+      <recent name="C:\Users\ianfi\Documents\GitLab\ep2\SnakeGame" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -116,7 +117,7 @@
       <workItem from="1573312989266" duration="8501000" />
       <workItem from="1573490163461" duration="1360000" />
       <workItem from="1573514905839" duration="566000" />
-      <workItem from="1573528088860" duration="587000" />
+      <workItem from="1573528088860" duration="1038000" />
     </task>
     <servers />
   </component>
