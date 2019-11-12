@@ -64,6 +64,7 @@ Data de entrega: 12/11/2019
     Na IDE, dar open project não na pasta ep2, mas sim na pasta SnakeGame.
 
     Dar o run no arquivo src/Main/Game.java
+    Ou abrir o executável SnakeGame/SnakeGame.jar
 ```   
     
 # Menu do jogo
