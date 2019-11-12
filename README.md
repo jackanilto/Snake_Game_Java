@@ -120,6 +120,20 @@ Data de entrega: 12/11/2019
 ```Bomb Poison```
 ![](SnakeGame/Resources/Fruits/bombPoison.png)  **Veneno que causa a morte da Snake.**
 
+
+As frutas aparecem aleatoriamente pelo mapa. Elas ficam na tela por volta de 8 a 9 segundos, quando este tempo acaba, a fruta desaparece e surgi outra. Existe uma probalidade de cada fruta surgir:
+
+```java
+Simple Candy: 40%
+
+Big Pumpkin: 20%
+
+Decrease Saw: 13.3%
+
+Bomb Poison: 26.6%
+```
+
+
 # Obstáculo
 ### *Castle*
 ![](SnakeGame/Resources/Fruits/obstacleCastle.png)   **Obtáculo na tela, que causa a morte da Snake (com exeção da Kitty Ghost).**
