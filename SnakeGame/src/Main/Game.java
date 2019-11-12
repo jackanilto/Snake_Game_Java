@@ -1,8 +1,8 @@
 package Main;
 
-import GameState.KittyGame;
-import GameState.SimpleGame;
-import GameState.StarGame;
+import Gameplay.KittyGame;
+import Gameplay.SimpleGame;
+import Gameplay.StarGame;
 
 import javax.swing.JFrame;
 import java.awt.*;

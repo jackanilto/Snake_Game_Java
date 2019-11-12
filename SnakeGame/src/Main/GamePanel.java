@@ -6,7 +6,7 @@ import java.awt.event.*;
 
 import javax.swing.JPanel;
 
-import GameState.GameStateManager;
+import Menu.GameStateManager;
 
 public class GamePanel extends JPanel 
 	implements Runnable, KeyListener{
@@ -67,8 +67,7 @@ public class GamePanel extends JPanel
 		long start;
 		long elapsed;
 		long wait;
-		
-		// Game Loop
+
 		while(running) {
 			
 			start = System.nanoTime();

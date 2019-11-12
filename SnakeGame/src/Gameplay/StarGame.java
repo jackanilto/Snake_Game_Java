@@ -1,4 +1,4 @@
-package GameState;
+package Gameplay;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -13,9 +13,8 @@ import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
-public class SimpleGame extends JPanel implements KeyListener, ActionListener{
+public class StarGame extends JPanel implements KeyListener, ActionListener{
 
-    // Variável para tratar o desapareceimento da fruta
     public int time;
 
     private int[] snakexlength = new int[750];
@@ -34,13 +33,13 @@ public class SimpleGame extends JPanel implements KeyListener, ActionListener{
     private ImageIcon leftmouth;
     private ImageIcon snakeimage;
 
-    // Tamanho da snake
+
     private int lengthsnake = 3;
 
     private Timer timer;
     private int delay = 100;
 
-    // Posição x das "frutas"
+
     private int[] Simplefruitxpos = {25,50,75,100,125,150,175,200,225,250,275,300,325,
             350,500,525,550,575,600,625,650,675,700,725,750,775,800,825,850};
     private int[] Bigfruitxpos = {25,50,75,100,125,150,175,200,225,250,275,300,325,
@@ -50,40 +49,35 @@ public class SimpleGame extends JPanel implements KeyListener, ActionListener{
     private int[] Bombfruitxpos = {25,50,75,100,125,150,175,200,225,250,275,300,325,
             350,500,525,550,575,600,625,650,675,700,725,750,775,800,825,850};
 
-    // Posição y das "frutas"
     private int[] fruitypos = {75,100,125,150,175,200,225,250,400,425,450,
             475,500,525,550,575,600,625};
 
-    // Posição xy do "obstáculo"
     private int[] Obstaclexpos = {375, 400, 425, 450, 475};
     private int[] Obstacleypos = {275, 300, 325, 350, 375};
 
-    // Criando as frutas
     private ImageIcon Simplefruit;
     private ImageIcon Bigfruit;
     private ImageIcon Decreasefruit;
     private ImageIcon Bombfruit;
 
-    // Criando o obstáculo
     private ImageIcon Castleobstacle;
 
-    // Randomiza a posição que a fruta irá aparecer
     private Random random = new Random();
     private int xpos = random.nextInt(29);
     private int ypos = random.nextInt(18);
 
-    // Randomiza qual fruta irá aparecer
+
     private Random randomFruit = new Random();
     private int PopsUp = randomFruit.nextInt(15);
 
-    // Pontuação
+
     private int score = 0;
 
     private int moves = 0;
 
     private ImageIcon titleImage;
 
-    public SimpleGame() {
+    public StarGame() {
         time = 0;
 
         addKeyListener(this);
@@ -105,56 +99,56 @@ public class SimpleGame extends JPanel implements KeyListener, ActionListener{
             snakeylength[0] = 100;
         }
 
-        // Arte - Borda
+
         g.setColor(new Color(255, 127, 39));
         g.drawRect(24, 10, 851, 55);
 
-        // Arte - Título superior
+
         titleImage = new ImageIcon("Resources/Backgrounds/snaketitle.png");
         titleImage.paintIcon(this, g, 25, 11 );
 
-        // Arte - Borda gameplay
+
         g.setColor(new Color(255, 127, 39));
         g.drawRect(24, 74, 851, 577);
 
-        // Arte - Background gameplay
+
         g.setColor(Color.BLACK);
         g.fillRect(25, 75, 850, 575);
 
-        // Arte - Pontuação
+
         g.setColor(new Color(255, 127, 39));
         g.setFont(new Font("arial", Font.PLAIN, 14));
         g.drawString("Pontuação: " + score, 700, 35);
 
-        // Arte - Tamanho da "cobra"
+
         g.setColor(new Color(255, 127, 39));
         g.setFont(new Font("arial", Font.PLAIN, 14));
         g.drawString("Tamanho: " + lengthsnake, 700, 55);
 
 
-        rightmouth = new ImageIcon("Resources/Characters/pumpkingR.png");
+        rightmouth = new ImageIcon("Resources/Characters/draculaR.png");
         rightmouth.paintIcon(this, g, snakexlength[0], snakeylength[0]);
 
-        // Movimento da "cobra"
+
         for (int a = 0; a < lengthsnake; a++) {
             if (a==0 && right) {
-                rightmouth = new ImageIcon("Resources/Characters/pumpkingR.png");
+                rightmouth = new ImageIcon("Resources/Characters/draculaR.png");
                 rightmouth.paintIcon(this, g, snakexlength[a], snakeylength[a]);
             }
             if (a==0 && left) {
-                leftmouth = new ImageIcon("Resources/Characters/pumpkingL.png");
+                leftmouth = new ImageIcon("Resources/Characters/draculaL.png");
                 leftmouth.paintIcon(this, g, snakexlength[a], snakeylength[a]);
             }
             if (a==0 && down) {
-                downmouth = new ImageIcon("Resources/Characters/pumpkingD.png");
+                downmouth = new ImageIcon("Resources/Characters/draculaD.png");
                 downmouth.paintIcon(this, g, snakexlength[a], snakeylength[a]);
             }
             if (a==0 && up) {
-                upmouth = new ImageIcon("Resources/Characters/pumpkingU.png");
+                upmouth = new ImageIcon("Resources/Characters/draculaU.png");
                 upmouth.paintIcon(this, g, snakexlength[a], snakeylength[a]);
             }
             if (a!=0) {
-                snakeimage = new ImageIcon("Resources/Characters/pumpkin.png");
+                snakeimage = new ImageIcon("Resources/Characters/bat.png");
                 snakeimage.paintIcon(this, g, snakexlength[a], snakeylength[a]);
             }
         }
@@ -164,7 +158,7 @@ public class SimpleGame extends JPanel implements KeyListener, ActionListener{
             // Simple Fruit
             Simplefruit = new ImageIcon("Resources/Fruits/simpleCandy.png");
             if ((Simplefruitxpos[xpos] == snakexlength[0] && fruitypos[ypos] == snakeylength[0])) {
-                score ++;
+                score += 2;
                 lengthsnake++;
                 time = 0;
                 xpos = random.nextInt(29);
@@ -172,7 +166,6 @@ public class SimpleGame extends JPanel implements KeyListener, ActionListener{
 
                 PopsUp = randomFruit.nextInt(15);
             }else if (time >= 90) {
-                // Tempo de desaparecimento da fruta
                 xpos = random.nextInt(29);
                 ypos = random.nextInt(18);
                 PopsUp = randomFruit.nextInt(15);
@@ -184,30 +177,26 @@ public class SimpleGame extends JPanel implements KeyListener, ActionListener{
             // Big Fruit
             Bigfruit = new ImageIcon("Resources/Fruits/bigPumpkin.png");
             if ((Bigfruitxpos[xpos] == snakexlength[0] && fruitypos[ypos] == snakeylength[0])) {
-                score += 2;
-                lengthsnake++;
+                score += 4;
                 time = 0;
+                lengthsnake++;
                 xpos = random.nextInt(29);
                 ypos = random.nextInt(18);
 
                 PopsUp = randomFruit.nextInt(15);
             }else if (time >= 90) {
-                // Tempo de desaparecimento da fruta
                 xpos = random.nextInt(29);
                 ypos = random.nextInt(18);
                 PopsUp = randomFruit.nextInt(15);
                 time = 0;
             }
+
             Bigfruit.paintIcon(this, g, Bigfruitxpos[xpos], fruitypos[ypos]);
         }
         else if (PopsUp > 9 && PopsUp <= 13 ) {
             // Bomb Fruit
             Bombfruit = new ImageIcon("Resources/Fruits/bombPoison.png");
             if ((Bombfruitxpos[xpos] == snakexlength[0] && fruitypos[ypos] == snakeylength[0])) {
-                score += 2;
-                lengthsnake++;
-                time = 0;
-
                 right = false;
                 left = false;
                 up = false;
@@ -241,7 +230,6 @@ public class SimpleGame extends JPanel implements KeyListener, ActionListener{
 
                 PopsUp = randomFruit.nextInt(15);
             }else if (time >= 90) {
-                // Tempo de desaparecimento da fruta
                 xpos = random.nextInt(29);
                 ypos = random.nextInt(18);
                 PopsUp = randomFruit.nextInt(15);
@@ -254,7 +242,7 @@ public class SimpleGame extends JPanel implements KeyListener, ActionListener{
         Castleobstacle = new ImageIcon("Resources/Fruits/obstacleCastle.png");
         Castleobstacle.paintIcon(this, g, 375, 275);
 
-        // Condições para o 'Game Over'
+
         for (int b = 1; b < lengthsnake; b++) {
             if (((snakexlength[b] == snakexlength[0]) && (snakeylength[b] == snakeylength[0])) ||
                     ((snakexlength[b] >= Obstaclexpos[0] && snakexlength[b] <= Obstaclexpos[4] ) &&
@@ -282,8 +270,6 @@ public class SimpleGame extends JPanel implements KeyListener, ActionListener{
         timer.start();
         time++;
 
-
-
         if(right) {
             for (int r = lengthsnake - 1; r >= 0; r--) {
                 snakeylength[r+1] = snakeylength[r];
@@ -296,11 +282,12 @@ public class SimpleGame extends JPanel implements KeyListener, ActionListener{
                     snakexlength[r] = snakexlength[r-1];
                 }
                 if (snakexlength[r] > 850) {
-                    snakexlength[r] = 850;
+                    snakexlength[r] = 25;
                 }
             }
             repaint();
         }
+
         if (left) {
             for (int r = lengthsnake - 1; r >= 0; r--) {
                 snakeylength[r + 1] = snakeylength[r];
@@ -312,7 +299,7 @@ public class SimpleGame extends JPanel implements KeyListener, ActionListener{
                     snakexlength[r] = snakexlength[r - 1];
                 }
                 if (snakexlength[r] < 25) {
-                    snakexlength[r] = 25;
+                    snakexlength[r] = 850;
                 }
             }
             repaint();
@@ -329,7 +316,7 @@ public class SimpleGame extends JPanel implements KeyListener, ActionListener{
                     snakeylength[r] = snakeylength[r-1];
                 }
                 if (snakeylength[r] < 75) {
-                    snakeylength[r] = 75;
+                    snakeylength[r] = 625;
                 }
             }
             repaint();
@@ -346,7 +333,7 @@ public class SimpleGame extends JPanel implements KeyListener, ActionListener{
                     snakeylength[r] = snakeylength[r-1];
                 }
                 if (snakeylength[r] > 625) {
-                    snakeylength[r] = 625;
+                    snakeylength[r] = 75;
                 }
             }
             repaint();

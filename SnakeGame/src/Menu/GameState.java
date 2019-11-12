@@ -1,4 +1,4 @@
-package GameState;
+package Menu;
 
 public abstract class GameState {
 	

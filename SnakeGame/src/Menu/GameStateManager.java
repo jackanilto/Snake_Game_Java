@@ -1,4 +1,6 @@
-package GameState;
+package Menu;
+
+import Menu.GameState;
 
 import java.util.ArrayList;
 

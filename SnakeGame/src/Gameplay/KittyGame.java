@@ -1,4 +1,4 @@
-package GameState;
+package Gameplay;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -13,19 +13,18 @@ import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
-public class StarGame extends JPanel implements KeyListener, ActionListener{
+public class KittyGame extends JPanel implements KeyListener, ActionListener{
 
     public int time;
 
     private int[] snakexlength = new int[750];
     private int[] snakeylength = new int[750];
 
+    private static boolean gameOver = false;
     private boolean left = false;
     private boolean right = false;
     private boolean up = false;
     private boolean down = false;
-
-    private static boolean gameOver = false;
 
     private ImageIcon rightmouth;
     private ImageIcon upmouth;
@@ -52,8 +51,6 @@ public class StarGame extends JPanel implements KeyListener, ActionListener{
     private int[] fruitypos = {75,100,125,150,175,200,225,250,400,425,450,
             475,500,525,550,575,600,625};
 
-    private int[] Obstaclexpos = {375, 400, 425, 450, 475};
-    private int[] Obstacleypos = {275, 300, 325, 350, 375};
 
     private ImageIcon Simplefruit;
     private ImageIcon Bigfruit;
@@ -77,7 +74,7 @@ public class StarGame extends JPanel implements KeyListener, ActionListener{
 
     private ImageIcon titleImage;
 
-    public StarGame() {
+    public KittyGame() {
         time = 0;
 
         addKeyListener(this);
@@ -126,49 +123,51 @@ public class StarGame extends JPanel implements KeyListener, ActionListener{
         g.drawString("Tamanho: " + lengthsnake, 700, 55);
 
 
-        rightmouth = new ImageIcon("Resources/Characters/draculaR.png");
+        rightmouth = new ImageIcon("Resources/Characters/ghostR.png");
         rightmouth.paintIcon(this, g, snakexlength[0], snakeylength[0]);
 
 
         for (int a = 0; a < lengthsnake; a++) {
             if (a==0 && right) {
-                rightmouth = new ImageIcon("Resources/Characters/draculaR.png");
+                rightmouth = new ImageIcon("Resources/Characters/ghostR.png");
                 rightmouth.paintIcon(this, g, snakexlength[a], snakeylength[a]);
             }
             if (a==0 && left) {
-                leftmouth = new ImageIcon("Resources/Characters/draculaL.png");
+                leftmouth = new ImageIcon("Resources/Characters/ghostL.png");
                 leftmouth.paintIcon(this, g, snakexlength[a], snakeylength[a]);
             }
             if (a==0 && down) {
-                downmouth = new ImageIcon("Resources/Characters/draculaD.png");
+                downmouth = new ImageIcon("Resources/Characters/ghostD.png");
                 downmouth.paintIcon(this, g, snakexlength[a], snakeylength[a]);
             }
             if (a==0 && up) {
-                upmouth = new ImageIcon("Resources/Characters/draculaU.png");
+                upmouth = new ImageIcon("Resources/Characters/ghostU.png");
                 upmouth.paintIcon(this, g, snakexlength[a], snakeylength[a]);
             }
             if (a!=0) {
-                snakeimage = new ImageIcon("Resources/Characters/bat.png");
+                snakeimage = new ImageIcon("Resources/Characters/ghost.png");
                 snakeimage.paintIcon(this, g, snakexlength[a], snakeylength[a]);
             }
         }
 
+        Castleobstacle = new ImageIcon("Resources/Fruits/obstacleCastle.png");
+        Castleobstacle.paintIcon(this, g, 375, 275);
 
         if (PopsUp <= 6) {
             // Simple Fruit
             Simplefruit = new ImageIcon("Resources/Fruits/simpleCandy.png");
             if ((Simplefruitxpos[xpos] == snakexlength[0] && fruitypos[ypos] == snakeylength[0])) {
-                score += 2;
+                score ++;
                 lengthsnake++;
                 time = 0;
                 xpos = random.nextInt(29);
                 ypos = random.nextInt(18);
 
-                PopsUp = randomFruit.nextInt(15);
+                PopsUp = randomFruit.nextInt(10);
             }else if (time >= 90) {
                 xpos = random.nextInt(29);
                 ypos = random.nextInt(18);
-                PopsUp = randomFruit.nextInt(15);
+                PopsUp = randomFruit.nextInt(10);
                 time = 0;
             }
             Simplefruit.paintIcon(this, g, Simplefruitxpos[xpos], fruitypos[ypos]);
@@ -177,9 +176,9 @@ public class StarGame extends JPanel implements KeyListener, ActionListener{
             // Big Fruit
             Bigfruit = new ImageIcon("Resources/Fruits/bigPumpkin.png");
             if ((Bigfruitxpos[xpos] == snakexlength[0] && fruitypos[ypos] == snakeylength[0])) {
-                score += 4;
-                time = 0;
+                score += 2;
                 lengthsnake++;
+                time = 0;
                 xpos = random.nextInt(29);
                 ypos = random.nextInt(18);
 
@@ -197,10 +196,6 @@ public class StarGame extends JPanel implements KeyListener, ActionListener{
             // Bomb Fruit
             Bombfruit = new ImageIcon("Resources/Fruits/bombPoison.png");
             if ((Bombfruitxpos[xpos] == snakexlength[0] && fruitypos[ypos] == snakeylength[0])) {
-                score += 2;
-                lengthsnake++;
-                time = 0;
-
                 right = false;
                 left = false;
                 up = false;
@@ -243,18 +238,13 @@ public class StarGame extends JPanel implements KeyListener, ActionListener{
         }
 
 
-        Castleobstacle = new ImageIcon("Resources/Fruits/obstacleCastle.png");
-        Castleobstacle.paintIcon(this, g, 375, 275);
-
-
         for (int b = 1; b < lengthsnake; b++) {
-            if (((snakexlength[b] == snakexlength[0]) && (snakeylength[b] == snakeylength[0])) ||
-                    ((snakexlength[b] >= Obstaclexpos[0] && snakexlength[b] <= Obstaclexpos[4] ) &&
-                            (snakeylength[b] >= Obstacleypos[0] && snakeylength[b] <= Obstacleypos[4])) ){
+            if (snakexlength[b] == snakexlength[0] && snakeylength[b] == snakeylength[0]) {
                 right = false;
                 left = false;
                 up = false;
                 down = false;
+
                 gameOver = true;
 
                 g.setColor(Color.ORANGE);
@@ -286,12 +276,11 @@ public class StarGame extends JPanel implements KeyListener, ActionListener{
                     snakexlength[r] = snakexlength[r-1];
                 }
                 if (snakexlength[r] > 850) {
-                    snakexlength[r] = 25;
+                    snakexlength[r] = 850;
                 }
             }
             repaint();
         }
-
         if (left) {
             for (int r = lengthsnake - 1; r >= 0; r--) {
                 snakeylength[r + 1] = snakeylength[r];
@@ -303,7 +292,7 @@ public class StarGame extends JPanel implements KeyListener, ActionListener{
                     snakexlength[r] = snakexlength[r - 1];
                 }
                 if (snakexlength[r] < 25) {
-                    snakexlength[r] = 850;
+                    snakexlength[r] = 25;
                 }
             }
             repaint();
@@ -320,7 +309,7 @@ public class StarGame extends JPanel implements KeyListener, ActionListener{
                     snakeylength[r] = snakeylength[r-1];
                 }
                 if (snakeylength[r] < 75) {
-                    snakeylength[r] = 625;
+                    snakeylength[r] = 75;
                 }
             }
             repaint();
@@ -337,7 +326,7 @@ public class StarGame extends JPanel implements KeyListener, ActionListener{
                     snakeylength[r] = snakeylength[r-1];
                 }
                 if (snakeylength[r] > 625) {
-                    snakeylength[r] = 75;
+                    snakeylength[r] = 625;
                 }
             }
             repaint();

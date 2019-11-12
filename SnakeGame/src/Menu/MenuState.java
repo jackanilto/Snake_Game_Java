@@ -1,4 +1,4 @@
-package GameState;
+package Menu;
 
 import Main.Game;
 import Menu.Background;
