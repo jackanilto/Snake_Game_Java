@@ -31,8 +31,8 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
@@ -116,6 +116,7 @@
       <workItem from="1573312989266" duration="8501000" />
       <workItem from="1573490163461" duration="1360000" />
       <workItem from="1573514905839" duration="566000" />
+      <workItem from="1573528088860" duration="587000" />
     </task>
     <servers />
   </component>
