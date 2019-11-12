@@ -79,7 +79,7 @@ Data de entrega: 12/11/2019
     Comum Pumpkin
     Kitty Ghost
     Star Dracula
-    Quit
+    Quit 
 ```   
 
 # Modos de jogo
@@ -102,6 +102,7 @@ Data de entrega: 12/11/2019
     Recebe o dobro de pontos ao comer as frutas.
     Está snake pode atravessar as bordas do jogo, mas não pode atravessar o obstáculo da tela e nem a si mesma.
 ```   
+* ***Todas as snakes são controladas usando as "setinhas" do teclado***
     
 # Tipos de frutas
 
