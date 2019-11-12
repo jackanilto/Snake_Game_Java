@@ -60,12 +60,16 @@ Data de entrega: 12/11/2019
    
 # Como executar o código
 
+### Na IDE IntelliJ IDEA 2019.2
 ```
-    Na IDE, dar open project não na pasta ep2, mas sim na pasta SnakeGame.
+    Dar open project não na pasta ep2, mas sim na pasta SnakeGame.
     Dar o run no arquivo src/Main/Game.java
+```  
+### Executável - dentro da pasta SnakeGame/ dar o comando:
+```java
+    java -jar SnakeGame.jar
     
-    Executável SnakeGame/SnakeGame.jar (não funcionando corretamente)
-```   
+```
     
 # Menu do jogo
 
