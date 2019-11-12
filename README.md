@@ -145,7 +145,7 @@ Bomb Poison: 26.6%
 ![](SnakeGame/Resources/Fruits/obstacleCastle.png)   **Obtáculo na tela, que causa a morte da Snake (com exeção da Kitty Ghost).**
 
 # Diagrama de Classes
-![](SnakeGame/DiagramaDeClasses.PNG)
+![](DiagramaDeClasses.png)
 
 ## Descrição
 
