@@ -64,7 +64,6 @@ Data de entrega: 12/11/2019
     Na IDE, dar open project não na pasta ep2, mas sim na pasta SnakeGame.
 
     Dar o run no arquivo src/Main/Game.java
-    Ou abra o joga pelo executável criado SnakeGame/SnakeGame.jar
 ```   
     
 # Menu do jogo
@@ -135,10 +134,12 @@ Decrease Saw: 13.3%
 Bomb Poison: 26.6%
 ```
 
-
 # Obstáculo
 ### *Castle*
 ![](SnakeGame/Resources/Fruits/obstacleCastle.png)   **Obtáculo na tela, que causa a morte da Snake (com exeção da Kitty Ghost).**
+
+# Diagrama de Classes
+![](SnakeGame/DiagramaDeClasses.PNG)
 
 ## Descrição
 
