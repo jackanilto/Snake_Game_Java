@@ -6,29 +6,38 @@ Data de entrega: 12/11/2019
 
 # **TRICKS OR TREATS** - Game Snake com temática de HALLOWEEN
 
+```java
     Ian Fillipe Pontes Ferreira
     18/0102087
     Turma B (Carla)
+```   
     
 # JAVA
 ### Versão utilizada para fazer o EP2
 
+```java
     java version "12.0.2" 2019-07-16
     Java(TM) SE Runtime Environment (build 12.0.2+10)
     Java HotSpot(TM) 64-Bit Server VM (build 12.0.2+10, mixed mode, sharing)
+```   
     
 ### Testado também na versão
-    
+
+```java
     java version "13.0.1" 2019-10-15
     Java(TM) SE Runtime Environment (build 13.0.1+9)
     Java HotSpot(TM) 64-Bit Server VM (build 13.0.1+9, mixed mode, sharing)
+```   
     
 ### IDE utilizada
-    
+
+```java   
     IntelliJ IDEA 2019.2
-    
+```   
+
 ### Bibliotecas utilizadas
 
+```java   
     import javax.swing.JFrame;
     import javax.swing.ImageIcon;
     import javax.swing.JPanel;
@@ -47,54 +56,72 @@ Data de entrega: 12/11/2019
     import java.awt.event.ActionEvent;
     import java.awt.event.KeyListener;
     import java.util.Random;
-    
-    
-    
+ ```     
+   
 # Como executar o código
 
-    Na IDE, dar open project não na pasta EP2, mas sim na pasta SnakeGame.
+```
+    Na IDE, dar open project não na pasta ep2, mas sim na pasta SnakeGame.
+
     Dar o run no arquivo src/Main/Game.java
-    
     Ou abra o joga pelo executável criado SnakeGame/SnakeGame.jar
+```   
     
 # Menu do jogo
 
+```   
     O menu possui quatro opções e elas devem ser controladas através das "setinhas" do teclado, e escolhidas 
     através da tecla "Enter".
+```   
     
 ### Opções do menu 
-* **Comum Pumpkin**
-* **Kitty Ghost**
-* **Star Dracula**
-* **Quit**
+```java
+    Comum Pumpkin
+    Kitty Ghost
+    Star Dracula
+    Quit
+```   
 
 # Modos de jogo
 ### Comum Pumpkin:
 
+```   
     Snake classica, sem habilidades especiais. 
     Está snake não pode atravessar as bordas do jogo, o obstáculo da tela e nem a si mesma
+```   
     
 ### Kitty Ghost:
 
+```   
     Está snake pode atravessar o obstáculo da tela, mas não pode atravessar as bordas do jogo e nem a si mesma.
+```   
     
 ### Star Dracula:
 
+```   
     Recebe o dobro de pontos ao comer as frutas.
     Está snake pode atravessar as bordas do jogo, mas não pode atravessar o obstáculo da tela e nem a si mesma.
+```   
     
 # Tipos de frutas
-### Simple Candy
+
+```Simple Candy```
 ![](SnakeGame/Resources/Fruits/simpleCandy.png)  **Doce comum, dá um ponto e aumenta o tamanho da Snake.**
-### Big Pumpkin
+
+
+```Big Pumpkin```
 ![](SnakeGame/Resources/Fruits/bigPumpkin.png)  **Dá o dobro de pontos da Simple Candy e aumenta o tamanho da Snake da mesma forma que a Simple Candy.**
-### Decrease Saw
+
+
+```Decrease Saw```
 ![](SnakeGame/Resources/Fruits/decreaseSaw.png) **Diminui o tamanho da Snake para o tamanho inicial, sem fornecer nem retirar pontos.**
-### Bomb Poison
+
+
+```Bomb Poison```
 ![](SnakeGame/Resources/Fruits/bombPoison.png)  **Veneno que causa a morte da Snake.**
 
 # Obstáculo
-### Castle
+### *Castle*
 ![](SnakeGame/Resources/Fruits/obstacleCastle.png)   **Obtáculo na tela, que causa a morte da Snake (com exeção da Kitty Ghost).**
 
 ## Descrição
