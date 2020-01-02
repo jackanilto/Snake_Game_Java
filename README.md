@@ -1,7 +1,7 @@
 # **TRICKS OR TREATS** - Game Snake com temática de HALLOWEEN
     
 # JAVA
-### Versão utilizada para fazer o EP2
+### Versão utilizada 
 
 ```java
     java version "12.0.2" 2019-07-16
@@ -56,7 +56,6 @@
 ### Executável - dentro da pasta SnakeGame/ dar o comando:
 ```java
     java -jar SnakeGame.jar
-    
 ```
     
 # Menu do jogo
