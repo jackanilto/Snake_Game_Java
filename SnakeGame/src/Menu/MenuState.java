@@ -28,13 +28,13 @@ public class MenuState extends GameState {
 		this.gsm = gsm;
 		
 		try {
-			
+			//
 			bg = new Background("/Backgrounds/backMenu.png", 1);
 			bg.setVector(-0.1, 0);
 			
-			titleColor = new Color(3, 46, 100);
-			titleFont = new Font("Mornig Glory",
-					Font.PLAIN,
+			titleColor = new Color(159, 0, 0);
+			titleFont = new Font("SERIF",
+					Font.BOLD,
 					20);
 			
 			font = new Font("Camélia", Font.PLAIN, 20);
@@ -55,7 +55,7 @@ public class MenuState extends GameState {
 		// Arte - Background
 		bg.draw(g);
 		
-		// Arte - Título
+		// Arte - Título (dentro do Panel menu)
 		g.setColor(titleColor);
 		g.setFont(titleFont);
 		g.drawString("Tricks or Treats", 50, 70);
