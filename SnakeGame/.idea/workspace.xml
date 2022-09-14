@@ -5,9 +5,25 @@
       <artifact name="SnakeGame:jar" />
     </artifacts-to-build>
   </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="3177fd7b-3bc3-410c-b4de-0091f40cf72f" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="3177fd7b-3bc3-410c-b4de-0091f40cf72f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Gameplay/KittyGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gameplay/KittyGame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Gameplay/SimpleGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gameplay/SimpleGame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Gameplay/StarGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gameplay/StarGame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Main/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Main/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Main/GamePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Main/GamePanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Menu/Background.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Menu/Background.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Menu/GameState.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Menu/GameState.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Menu/GameStateManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Menu/GameStateManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Menu/MenuState.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Menu/MenuState.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,18 +39,27 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="1T4umsYhcVcwqM1O0BffA1jSAEY" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/WorkSpace/Snake_Game_Java/SnakeGame&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ianfi\Documents\GitLab\ep2\SnakeGame\Resources\Fruits" />
@@ -49,21 +74,9 @@
       <recent name="C:\Users\ianfi\Documents\GitLab\ep2\SnakeGame" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="JAR Application.SnakeGame.jar">
+  <component name="RunManager" selected="Application.Game">
     <configuration name="Game" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="12" />
+      <option name="ALTERNATIVE_JRE_PATH" value="$USER_HOME$/.jdks/azul-13.0.12" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="Main.Game" />
       <module name="SnakeGame" />
@@ -90,13 +103,18 @@
       <option name="JAR_PATH" value="$PROJECT_DIR$/SnakeGame.jar" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Application.Game" />
+      <item itemvalue="JAR Application.SnakeGame.jar" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JAR Application.SnakeGame.jar" />
         <item itemvalue="Application.Game" />
+        <item itemvalue="JAR Application.SnakeGame.jar" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -124,20 +142,21 @@
       <workItem from="1573514905839" duration="566000" />
       <workItem from="1573528088860" duration="1038000" />
       <workItem from="1573590859953" duration="657000" />
+      <workItem from="1663119481964" duration="121000" />
+      <workItem from="1663119607417" duration="125000" />
+      <workItem from="1663119735881" duration="615000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
