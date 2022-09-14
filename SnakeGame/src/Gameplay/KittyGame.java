@@ -101,6 +101,7 @@ public class KittyGame extends JPanel implements KeyListener, ActionListener{
         g.drawRect(24, 10, 851, 55);
 
 
+       // titleImage = new ImageIcon("Resources/Backgrounds/snaketitle.png");
         titleImage = new ImageIcon("Resources/Backgrounds/snaketitle.png");
         titleImage.paintIcon(this, g, 25, 11 );
 

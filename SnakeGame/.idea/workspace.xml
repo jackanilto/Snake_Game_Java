@@ -9,20 +9,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3177fd7b-3bc3-410c-b4de-0091f40cf72f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="3177fd7b-3bc3-410c-b4de-0091f40cf72f" name="Default Changelist" comment="Projeto Importado no IntelliJ IDEA 2022.2 (Ultimate Edition)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Gameplay/KittyGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gameplay/KittyGame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Gameplay/SimpleGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gameplay/SimpleGame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Gameplay/StarGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gameplay/StarGame.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Main/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Main/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Main/GamePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Main/GamePanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Menu/Background.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Menu/Background.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Menu/GameState.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Menu/GameState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Menu/GameStateManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Menu/GameStateManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Menu/MenuState.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Menu/MenuState.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gameplay/KittyGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gameplay/KittyGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Menu/MenuState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu/MenuState.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,8 +138,16 @@
       <workItem from="1573590859953" duration="657000" />
       <workItem from="1663119481964" duration="121000" />
       <workItem from="1663119607417" duration="125000" />
-      <workItem from="1663119735881" duration="615000" />
+      <workItem from="1663119735881" duration="3874000" />
     </task>
+    <task id="LOCAL-00001" summary="Projeto Importado no IntelliJ IDEA 2022.2 (Ultimate Edition)">
+      <created>1663120432843</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1663120432843</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,5 +163,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Projeto Importado no IntelliJ IDEA 2022.2 (Ultimate Edition)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Projeto Importado no IntelliJ IDEA 2022.2 (Ultimate Edition)" />
   </component>
 </project>

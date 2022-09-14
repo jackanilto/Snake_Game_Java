@@ -29,14 +29,14 @@ public class MenuState extends GameState {
 		
 		try {
 			
-			bg = new Background("/Backgrounds/menu.jpg", 1);
+			bg = new Background("/Backgrounds/backMenu.png", 1);
 			bg.setVector(-0.1, 0);
 			
 			titleColor = new Color(238, 0, 0);
 			titleFont = new Font(
 					"Century Gothic",
 					Font.PLAIN,
-					28);
+					20);
 			
 			font = new Font("Arial", Font.PLAIN, 12);
 			
@@ -59,16 +59,16 @@ public class MenuState extends GameState {
 		// Arte - Título
 		g.setColor(titleColor);
 		g.setFont(titleFont);
-		g.drawString("Tricks or Treats", 50, 70);
+		g.drawString("Doces ou Travessuras", 50, 70);
 		
 		// Arte - Opções do menu
 		g.setFont(font);
 		for(int i = 0; i < options.length; i++) {
 			if(i == currentChoice) {
-				g.setColor(Color.RED);
+				g.setColor(Color.BLUE);
 			}
 			else {
-				g.setColor(Color.BLACK);
+				g.setColor(Color.WHITE);
 			}
 			g.drawString(options[i], 60, 130 + i * 15);
 		}
