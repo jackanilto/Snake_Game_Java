@@ -1,7 +1,5 @@
 package Menu;
 
-import Menu.GameState;
-
 import java.util.ArrayList;
 
 public class GameStateManager {

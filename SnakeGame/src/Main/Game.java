@@ -11,7 +11,7 @@ public class Game {
 	
 	public static void main(String[] args) {
 		
-		JFrame window = new JFrame("Doces ou Travessuras");
+		JFrame window = new JFrame("Tricks or Treats");
 		window.setContentPane(new GamePanel());
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		window.setResizable(false);
@@ -21,7 +21,7 @@ public class Game {
 
 	}
 	public static void simple() {
-        JFrame gameplay = new JFrame("Doces ou Travessuras - Abóbora Comum");
+        JFrame gameplay = new JFrame("Tricks or Treats - Comum Pumpkin");
         SimpleGame SimpleGame = new SimpleGame();
 
         gameplay.setBounds(320, 240, 905, 700);
@@ -34,7 +34,7 @@ public class Game {
     }
 
     public static void kitty() {
-        JFrame gameplay = new JFrame("Doces ou Travessuras - Fantasma de gatinho");
+        JFrame gameplay = new JFrame("Tricks or Treats - Kitty Ghost");
         KittyGame kittyGame = new KittyGame();
 
         gameplay.setBounds(320, 240, 905, 700);
@@ -47,7 +47,7 @@ public class Game {
     }
 
     public static void star() {
-        JFrame gameplay = new JFrame("Doces ou Travessuras - Estrela Drácula");
+        JFrame gameplay = new JFrame("Tricks or Treats - Star Dracula");
         StarGame starGame = new StarGame();
 
         gameplay.setBounds(320, 240, 905, 700);

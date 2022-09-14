@@ -11,11 +11,11 @@
   <component name="ChangeListManager">
     <list default="true" id="3177fd7b-3bc3-410c-b4de-0091f40cf72f" name="Default Changelist" comment="Projeto Importado no IntelliJ IDEA 2022.2 (Ultimate Edition)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Gameplay/KittyGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Gameplay/KittyGame.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Main/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Main/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Menu/GameStateManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Menu/GameStateManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Menu/MenuState.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Menu/MenuState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gameplay/KittyGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gameplay/KittyGame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Menu/GameStateManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu/GameStateManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Menu/MenuState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu/MenuState.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -139,6 +139,7 @@
       <workItem from="1663119481964" duration="121000" />
       <workItem from="1663119607417" duration="125000" />
       <workItem from="1663119735881" duration="3874000" />
+      <workItem from="1663150362617" duration="1772000" />
     </task>
     <task id="LOCAL-00001" summary="Projeto Importado no IntelliJ IDEA 2022.2 (Ultimate Edition)">
       <created>1663120432843</created>

@@ -32,13 +32,12 @@ public class MenuState extends GameState {
 			bg = new Background("/Backgrounds/backMenu.png", 1);
 			bg.setVector(-0.1, 0);
 			
-			titleColor = new Color(238, 0, 0);
-			titleFont = new Font(
-					"Century Gothic",
+			titleColor = new Color(3, 46, 100);
+			titleFont = new Font("Mornig Glory",
 					Font.PLAIN,
 					20);
 			
-			font = new Font("Arial", Font.PLAIN, 12);
+			font = new Font("Camélia", Font.PLAIN, 20);
 			
 		}
 		catch(Exception e) {
@@ -59,7 +58,7 @@ public class MenuState extends GameState {
 		// Arte - Título
 		g.setColor(titleColor);
 		g.setFont(titleFont);
-		g.drawString("Doces ou Travessuras", 50, 70);
+		g.drawString("Tricks or Treats", 50, 70);
 		
 		// Arte - Opções do menu
 		g.setFont(font);
